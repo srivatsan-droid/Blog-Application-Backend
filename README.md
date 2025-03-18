@@ -1,25 +1,40 @@
-🌍 Project Overview
-A secure and scalable blogging platform built with Spring Boot and Microservices Architecture.
+# 🚀 **Blogging Application - Microservices + JWT Authentication**
 
-🔹 Users can create, update, and delete blog posts.
-🔹 Implemented JWT Authentication for secured APIs.
-🔹 Uses Swagger UI for easy API documentation.
+![Java](https://img.shields.io/badge/Java-17-blue?style=for-the-badge&logo=java)  
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.7-green?style=for-the-badge&logo=springboot)  
+![MySQL](https://img.shields.io/badge/MySQL-Database-blue?style=for-the-badge&logo=mysql)  
+![Swagger](https://img.shields.io/badge/Swagger-API%20Docs-green?style=for-the-badge&logo=swagger)  
+![Docker](https://img.shields.io/badge/Docker-Containerization-blue?style=for-the-badge&logo=docker)  
+![Postman](https://img.shields.io/badge/Postman-Testing-orange?style=for-the-badge&logo=postman)  
+![JWT](https://img.shields.io/badge/JWT-Authentication-red?style=for-the-badge&logo=jsonwebtokens)  
 
-🛠️ Tech Stack
-🌟 Technology	🧩 Usage
-Java (Spring Boot)	Backend Framework
-Spring Security + JWT	Authentication & Authorization
-Spring Data JPA	ORM & Database Management
-MySQL	Relational Database
-Swagger	API Documentation
-Docker	Containerization
-Postman	API Testing
-📁 Project Structure
-pgsql
-Copy
-Edit
+---
+
+## 🌍 **Project Overview**  
+A **secure and scalable blogging platform** built with **Spring Boot** and **Microservices Architecture**.  
+
+🔹 Users can **create, update, and delete blog posts**.  
+🔹 Implemented **JWT Authentication** for secured APIs.  
+🔹 Uses **Swagger UI** for easy API documentation.  
+
+---
+
+## 🛠️ **Tech Stack**  
+| 🌟 Technology | 🧉 Usage |
+|:--------------|:-----------|
+| **Java (Spring Boot)** | Backend Framework |
+| **Spring Security + JWT** | Authentication & Authorization |
+| **Spring Data JPA** | ORM & Database Management |
+| **MySQL** | Relational Database |
+| **Swagger** | API Documentation |
+| **Docker** | Containerization |
+| **Postman** | API Testing |
+
+---
+
+## 💽 **Project Structure**  
+```
 /blogging-app
- ┣ 📂 .mvn                      # Maven Wrapper Files  
  ┣ 📂 src/main/java/com/blog/api/Blog_Application
  ┃ ┣ 📂 config                  # Configuration Files  
  ┃ ┣ 📂 controller              # REST API Controllers  
@@ -30,103 +45,95 @@ Edit
  ┃ ┃ ┣ 📜 Role.java             # User Roles  
  ┃ ┃ ┣ 📜 User.java             # User Model  
  ┃ ┣ 📂 exceptions              # Global Exception Handling  
- ┃ ┃ ┣ 📜 ApiException.java  
- ┃ ┃ ┣ 📜 GlobalExceptionHandler.java  
- ┃ ┃ ┣ 📜 ResourceNotFoundException.java  
  ┃ ┣ 📂 payloads                # DTOs & API Responses  
- ┃ ┃ ┣ 📜 ApiResponse.java  
- ┃ ┃ ┣ 📜 CategoryDTO.java  
- ┃ ┃ ┣ 📜 CommentDto.java  
- ┃ ┃ ┣ 📜 JwtAuthRequest.java  
- ┃ ┃ ┣ 📜 JwtAuthResponse.java  
- ┃ ┃ ┣ 📜 PostDto.java  
- ┃ ┃ ┣ 📜 PostResponse.java  
- ┃ ┃ ┣ 📜 RoleDto.java  
- ┃ ┃ ┣ 📜 UserDto.java  
  ┃ ┣ 📂 repository              # Data Access Layer  
- ┃ ┃ ┣ 📜 CategoryRepo.java  
- ┃ ┃ ┣ 📜 CommentRepo.java  
- ┃ ┃ ┣ 📜 PostRepo.java  
- ┃ ┃ ┣ 📜 UserRepo.java  
  ┃ ┣ 📂 security                # JWT Security Implementation  
- ┃ ┃ ┣ 📜 CustomUserDetailService.java  
- ┃ ┃ ┣ 📜 JwtAuthenticationEntryPoint.java  
- ┃ ┃ ┣ 📜 JwtAuthenticationFilter.java  
- ┃ ┃ ┣ 📜 JwtTokenHelper.java  
  ┃ ┣ 📂 service                 # Service Layer  
- ┃ ┃ ┣ 📂 impl                  # Service Implementations  
- ┃ ┃ ┃ ┣ 📜 CategoryServiceImpl.java  
- ┃ ┃ ┃ ┣ 📜 CommentServiceImpl.java  
- ┃ ┃ ┃ ┣ 📜 FileServiceImpl.java  
- ┃ ┃ ┃ ┣ 📜 PostServiceImpl.java  
- ┃ ┃ ┃ ┣ 📜 UserServiceImpl.java  
- ┃ ┃ ┣ 📜 CategoryService.java  
- ┃ ┃ ┣ 📜 CommentService.java  
- ┃ ┃ ┣ 📜 FileService.java  
- ┃ ┃ ┣ 📜 PostService.java  
- ┃ ┃ ┣ 📜 UserService.java  
-🔐 JWT Authentication Flow
-1️⃣ User Registers:
+```
 
-Sends a POST request to /register
-2️⃣ User Logs In:
+---
 
-Sends credentials to /login
-Receives a JWT token
-3️⃣ User Accesses Protected APIs:
+## 🔐 **JWT Authentication Flow**  
+1⃣ **User Registers:**  
+   - Sends a `POST` request to `/register`  
 
-Adds JWT Token in the Authorization header:
-bash
-Copy
-Edit
-Authorization: Bearer <your_token>
-📜 Swagger UI - API Documentation
-Access Swagger UI for interactive API documentation:
+2⃣ **User Logs In:**  
+   - Sends credentials to `/login`  
+   - Receives a **JWT token**  
 
-🔗 API Documentation URL:
+3⃣ **User Accesses Protected APIs:**  
+   - Adds **JWT Token** in the `Authorization` header:  
+     ```bash
+     Authorization: Bearer <your_token>
+     ```
 
-bash
-Copy
-Edit
+---
+
+## 📜 **Swagger UI - API Documentation**  
+Access **Swagger UI** for interactive API documentation:  
+
+🔗 **API Documentation URL:**  
+```
 http://localhost:8081/swagger-ui/index.html
-🚀 How to Run the Project
-🔹 Step 1: Clone the Repository
-bash
-Copy
-Edit
+```
+
+---
+
+## 🚀 **How to Run the Project**  
+
+### 🔹 **Step 1: Clone the Repository**  
+```bash
 git clone https://github.com/your-username/blogging-app.git
 cd blogging-app
-🔹 Step 2: Build the Project
-bash
-Copy
-Edit
+```
+
+### 🔹 **Step 2: Build the Project**  
+```bash
 mvn clean install
-🔹 Step 3: Run Services Using Docker
-bash
-Copy
-Edit
+```
+
+### 🔹 **Step 3: Run Services Using Docker**  
+```bash
 docker-compose up
-🚧 API Endpoints Summary
-🔹 Auth Service (JWT Authentication)
-Method	Endpoint	Description
-POST	/register	Register a new user
-POST	/login	Authenticate user and get JWT token
-🔹 Post Service
-Method	Endpoint	Description
-POST	/posts	Create a new post
-GET	/posts/{id}	Get post details
-DELETE	/posts/{id}	Delete a post
-🔹 Comment Service
-Method	Endpoint	Description
-POST	/comments	Add a comment
-DELETE	/comments/{id}	Delete a comment
-🚀 Future Enhancements
-✅ Implement Role-Based Access Control (RBAC)
-✅ Add Caching for Faster Responses
-✅ Integrate Kafka for Real-Time Messaging
+```
 
-🤝 Contributing
-If you'd like to contribute, feel free to fork the repository and submit a pull request.
+---
 
-📬 Contact
-📧 Email: sriramsrivatsan2001@gmail.com
+## 🛠️ **API Endpoints Summary**  
+
+### 🔹 **Auth Service (JWT Authentication)**  
+| Method | Endpoint | Description |
+|--------|---------|-------------|
+| `POST` | `/register` | Register a new user |
+| `POST` | `/login` | Authenticate user and get JWT token |
+
+### 🔹 **Post Service**  
+| Method | Endpoint | Description |
+|--------|---------|-------------|
+| `POST` | `/posts` | Create a new post |
+| `GET` | `/posts/{id}` | Get post details |
+| `DELETE` | `/posts/{id}` | Delete a post |
+
+### 🔹 **Comment Service**  
+| Method | Endpoint | Description |
+|--------|---------|-------------|
+| `POST` | `/comments` | Add a comment |
+| `DELETE` | `/comments/{id}` | Delete a comment |
+
+---
+
+## 🛡️ **Future Enhancements**  
+✅ Implement **Role-Based Access Control (RBAC)**  
+✅ Add **Caching for Faster Responses**  
+✅ Integrate **Kafka** for Real-Time Messaging  
+
+---
+
+## 🤝 **Contributing**  
+If you'd like to contribute, feel free to fork the repository and submit a pull request.  
+
+---
+
+## 📩 **Contact**  
+📧 **Email:** sriramsrivatsan2001@gmail.com
+
